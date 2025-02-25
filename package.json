@@ -1,20 +1,23 @@
 {
   "name": "ai-chat-widget",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "AI Chat Widget for websites",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "description": "",
   "dependencies": {
-    "@types/react": "^19.0.10",
-    "lucide-react": "^0.475.0",
-    "openai": "^4.85.4",
-    "react": "^19.0.0"
+    "lucide-react": "^0.475.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.26.9",
@@ -22,9 +25,8 @@
     "@babel/preset-react": "^7.26.3",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-node-resolve": "^16.0.0",
-    "babel-loader": "^9.2.1",
-    "rollup": "^4.34.8",
-    "webpack": "^5.98.0",
-    "webpack-cli": "^6.0.1"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^4.34.8"
   }
 }
